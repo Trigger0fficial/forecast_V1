@@ -1,6 +1,6 @@
-from colorama import init, Fore, Back, Style
-
-init()
+# from colorama import init, Fore, Back, Style
+#
+# init()
 
 
 
@@ -49,8 +49,8 @@ def calculationOfCoefficients(choise):
 state_user = 0
 
 while True:
-    out_blue('\n\n-------START-------\n')
-    outTurquoise('')
+    print('\n\n-------START-------\n')
+
     coefficient_1 = float(input('Введите коэфицент на первую команду '))
     coefficient_2 = float(input('Введите коэффицент на вторую команду '))
     totalAmount = int(input('Какую сумму хотите поставить? '))
@@ -185,7 +185,7 @@ while True:
     user_exit = int(input('Сделать еще раз ставку?\n'
                       '1.Еще раз!\n2.Выход '))
     if user_exit == 2:
-        out_blue('\n\n------Bye Bye------')
+        print('\n\n------Bye Bye------')
         break
 
 
