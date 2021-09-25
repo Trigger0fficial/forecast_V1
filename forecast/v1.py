@@ -19,9 +19,21 @@ def out_blue(text):
     print("\033[34m {}" .format(text))
 
 
+
+list_password = ['fcgo54lk', 'lfsd432l3821p']
+
+print('\n\n-------START-------\n')
+
+user_password = input('Введите пароль\n')
+
+
+
+
+
 def calculationOfCoefficients(choise):
     global listRate_1
     global listRate_2
+    count = 0
 
     for n in range(totalAmount):
         rate_1 = totalAmount - n
@@ -40,16 +52,26 @@ def calculationOfCoefficients(choise):
         listOverallResult_1.append(overallResult_1)
         listOverallResult_2.append(overallResult_2)
         if choise == 0:
+            count += 1
             print('Твой выигрыш первого события -', total_1, 'р, ', 'Твой выигрыш второго события -', total_2, 'р')
             print('Итого средств первого события', overallResult_1, 'Итого средств второго события', overallResult_2, '\nСтавка на первое событие', rate_1,
                   'Ставка на второе событие', rate_2, '\n')
+    print('Всего событий: {}'.format(count))
 
 
 
 state_user = 0
 
+
+
 while True:
-    print('\n\n-------START-------\n')
+
+
+    if user_password in list_password:
+        print('Аккаунт подтвержден!\n')
+    else:
+        print('Пароль неверный\n')
+        break
 
     coefficient_1 = float(input('Введите коэфицент на первую команду '))
     coefficient_2 = float(input('Введите коэффицент на вторую команду '))
